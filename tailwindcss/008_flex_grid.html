@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tailwindcss</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <!-- https://tailwindcss.com/docs/flex -->
+    <!-- https://tailwindcss.com/docs/width -->
+    <!-- https://tailwindcss.com/docs/gap -->
+    <br>
+    <h2>1</h2>
+    <div class="flex border-4 border-red-300">
+        <div class="p-2 border-2 border-blue-200">hello</div>
+        <div class="p-2 border-2 border-blue-200">hello</div>
+        <div class="p-2 border-2 border-blue-200">hello</div>
+        <div class="p-2 border-2 border-blue-200">hello</div>
+    </div>
+
+    <br>
+    <h2>2</h2>
+    <div class="flex border-4 border-red-300">
+        <div class="p-2 border-2 border-blue-200 w-1/4">hello</div>
+        <div class="p-2 border-2 border-blue-200 w-3/4">hello</div>
+    </div>
+
+    <br>
+    <h2>3</h2>
+    <div class="flex flex-col border-4 border-red-300">
+        <div class="p-2 border-2 border-blue-200">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+            nulla deserunt officia hic et blanditiis atque fugit sit eligendi voluptatem itaque at perspiciatis magni
+            tempora ipsam aliquam ducimus, libero voluptatum.</div>
+        <div class="p-2 border-2 border-blue-200">hello</div>
+        <div class="p-2 border-2 border-blue-200">hello</div>
+        <div class="p-2 border-2 border-blue-200">hello</div>
+    </div>
+
+    <br>
+    <h2>4</h2>
+    <div class="flex flex-wrap border-4 border-red-300">
+        <div class="p-2 border-2 border-blue-200">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+            nulla deserunt officia hic et blanditiis atque fugit sit eligendi voluptatem itaque at perspiciatis magni
+            tempora ipsam aliquam ducimus, libero voluptatum.</div>
+        <div class="p-2 border-2 border-blue-200">hello</div>
+        <div class="p-2 border-2 border-blue-200">hello</div>
+        <div class="p-2 border-2 border-blue-200">hello</div>
+    </div>
+
+    <!-- 
+        justify-content: center        - justify-center
+        justify-content: space-between - justify-between
+        align-items: flex-start        - items-start
+        align-items: center            - items-center
+        align-self: auto               - self-auto
+        align-slef: flex-start         - self-start
+        align-slef: flex-end           - self-end
+        flex: 1 1 0%                   - flex-1
+        flex: 1 1 auto                 - flex-auto
+        flex: 0 1 auto                 - flex-initial
+        flex: none                     - flex-none
+    -->
+
+    <br>
+    <h2>5</h2>
+    <!-- 다음 예제에서 flex-1을 지워보시고 어떻게 배치가 되는지 확인해보세요.  -->
+    <div class="flex flex-wrap border-4 border-red-300">
+        <div class="flex-1 p-2 border-2 border-blue-200">hello</div>
+        <div class="flex-1 p-2 border-2 border-blue-200">hello</div>
+        <div class="flex-1 p-2 border-2 border-blue-200">hello</div>
+        <div class="flex-1 p-2 border-2 border-blue-200">hello</div>
+        <div class="flex-1 p-2 border-2 border-blue-200">hello</div>
+        <div class="flex-1 p-2 border-2 border-blue-200">hello</div>
+    </div>
+
+    <br>
+    <h2>6</h2>
+    <!-- 
+        space-x-1 > margin-left: 0.25rem; /* 4px */
+        space-y-1 > margin-top: 0.25rem; /* 4px */
+    -->
+    <div class="flex flex-wrap space-x-2 border-4 border-red-300">
+        <div class="flex-1 p-2 border-2 border-blue-200">hello</div>
+        <div class="flex-1 p-2 border-2 border-blue-200">hello</div>
+        <div class="flex-1 p-2 border-2 border-blue-200">hello</div>
+        <div class="flex-1 p-2 border-2 border-blue-200">hello</div>
+        <div class="flex-1 p-2 border-2 border-blue-200">hello</div>
+        <div class="flex-1 p-2 border-2 border-blue-200">hello</div>
+    </div>
+
+    <br>
+    <h2>7</h2>
+    <!-- 
+        space-x-1 > margin-left: 0.25rem; /* 4px */
+        space-y-1 > margin-top: 0.25rem; /* 4px */
+    -->
+    <div class="flex flex-wrap space-x-2 space-y-2 border-4 border-red-300">
+        <div class="flex-1 p-2 border-2 border-blue-200">hello</div>
+        <div class="flex-1 p-2 border-2 border-blue-200">hello</div>
+        <div class="flex-1 p-2 border-2 border-blue-200">hello</div>
+        <div class="flex-1 p-2 border-2 border-blue-200">hello</div>
+        <div class="flex-1 p-2 border-2 border-blue-200">hello</div>
+        <div class="flex-1 p-2 border-2 border-blue-200">hello</div>
+        <div class="flex-1 p-2 border-2 border-blue-200">hello</div>
+        <div class="flex-1 p-2 border-2 border-blue-200">hello</div>
+        <div class="flex-1 p-2 border-2 border-blue-200">hello</div>
+        <div class="flex-1 p-2 border-2 border-blue-200">hello</div>
+        <div class="flex-1 p-2 border-2 border-blue-200">hello</div>
+        <div class="flex-1 p-2 border-2 border-blue-200">hello</div>
+        <div class="flex-1 p-2 border-2 border-blue-200">hello</div>
+    </div>
+
+    <br>
+    <h2>8</h2>
+    <!-- 
+        gap-px        gap: 1px;
+        gap-x-px    column-gap: 1px;
+        gap-1        gap: 0.25rem; /* 4px */
+    -->
+    <div class="flex flex-wrap gap-2 border-4 border-red-300">
+        <div class="flex-1 p-2 border-2 border-blue-200">hello</div>
+        <div class="flex-1 p-2 border-2 border-blue-200">hello</div>
+        <div class="flex-1 p-2 border-2 border-blue-200">hello</div>
+        <div class="flex-1 p-2 border-2 border-blue-200">hello</div>
+        <div class="flex-1 p-2 border-2 border-blue-200">hello</div>
+        <div class="flex-1 p-2 border-2 border-blue-200">hello</div>
+        <div class="flex-1 p-2 border-2 border-blue-200">hello</div>
+        <div class="flex-1 p-2 border-2 border-blue-200">hello</div>
+        <div class="flex-1 p-2 border-2 border-blue-200">hello</div>
+        <div class="flex-1 p-2 border-2 border-blue-200">hello</div>
+        <div class="flex-1 p-2 border-2 border-blue-200">hello</div>
+        <div class="flex-1 p-2 border-2 border-blue-200">hello</div>
+        <div class="flex-1 p-2 border-2 border-blue-200">hello</div>
+    </div>
+
+</body>
+</html>
