@@ -63,5 +63,52 @@ console.log(x, y)
     }
 }
 
+// 콜백함수
+// 콜백함수란 함수에 매개변수로 전달되어 실행되는 함수
+// 함수에 아규먼트로 전달
+
+function sum(x, y) {
+    return x + y
+}
+
+function costom(x, y, func) {
+    return func(x, y) + func(x, y)
+}
+
+costom(10, 20, sum)
+
+// arr = [1, 2, 3]
+// arr.sort(콜백함수)
+// arr.filter(콜백함수)
+// arr.map(콜백함수)
+
+function f(x) {
+    return x ** 2
+}
+
+[1, 2, 3].map(x => x ** 2)
+[1, 2, 3].map(f)
+
+    // 함수의 호이스팅
+    // 변수와 함수의 호이스팅은 내용이 많아요.
+    `
+// python에서는 error입니다!
+hello()
+
+def hello():
+    print('hello world')
+`
+hello()
+
+function hello() {
+    console.log('hello world')
+}
+
 
 // 즉시 실행 함수
+// 익명 즉시 실행 함수
+(function () {
+    let a = 1;
+    let b = 2;
+    return a + b;
+}());
