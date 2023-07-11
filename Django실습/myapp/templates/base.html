@@ -1,3 +1,4 @@
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,11 +14,11 @@
 <body>
     <div class="container">
         {% if user.is_authenticated %}
-        <p>Welcome, {{ user.email }}</p>
-        <a href="{% url 'user:logout' %}" class="btn">Logout</a>
+            <p>{% trans 'Welcome,' %} {{ user.email }}</p>
+            <a href="{% url 'user:logout' %}" class="btn">Logout</a>
         {% else %}
-        <p>Please, Login</p>
-        <a href="{% url 'user:login' %}" class="btn">Login</a>
+            <p>{% trans 'Please, Login' %}</p>
+            <a href="{% url 'user:login' %}" class="btn">Login</a>
         {% endif %}
         <br><br>
         <h1>Blog</h1>
