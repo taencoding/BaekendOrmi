@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form test</title>
+</head>
+<body>
+    <!-- <form action="http://127.0.0.1:8000/accounts/register/" method="post"> -->
+    <input type="text" name="username" placeholder="username">
+    <input type="password" name="password" placeholder="password">
+    <input id="login" type="submit" value="로그인">
+    <!-- </form> -->
+    <script>
+        // 버튼 클릭시
+        let btnSubmit = document.querySelector('#login');
+        btnSubmit.addEventListener('click', (e) => {
+            e.preventDefault();
+            let username = document.querySelector('input[name="username"]').value;
+            let password = document.querySelector('input[name="password"]').value;
+            let data = {
+                username: username,
+                password: password
+            }
+            // fetch로 http://127.0.0.1:8000/accounts/logindrf/에 post로 전송
+            fetch('http://127.0.0.1:8000/accounts/logindrf/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            })
+                .then(data => data.json())
+                .then(data => console.log(data))
+        })
+    </script>
+</body>
+</html>

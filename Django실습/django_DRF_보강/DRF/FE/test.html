@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title></title>
+</head>
+<body>
+    <h1>FE서버(Django서버X)</h1>
+    <div id="data"></div>
+    <script>
+        fetch('http://127.0.0.1:8000/test/')
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                document.getElementById('data').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
